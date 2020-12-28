@@ -1,0 +1,6 @@
+1. create the folder c:\Target\
+2. Open SQL Managment Studio
+3. run the query to generate commands
+SELECT 'bcp ' + st.NAME + ' out c:\Target\' + st.NAME + '.csv -c -S tcp:testserver.othernumber.database.windows.net,1433 -U youruser -P yourpassword -d ' + DB_NAME() FROM sys.tables st
+4. copy the result and run CMD whit administrative privilegies 
+5. finish
